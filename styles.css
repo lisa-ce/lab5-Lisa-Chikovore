@@ -142,68 +142,107 @@ p {
 }
 
 .card-title {
+    font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: var(--secondary);
   /* TODO: Add card title styles */
   /* HINT: Set font-size, margin, and color */
 }
 
 .card-text {
+    color: var(--gray);
+  margin-bottom: 10px;
   /* TODO: Add card text styles */
   /* HINT: Set color and margin */
 }
 
 /* Button Styles */
 .btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 0.95rem;
   /* TODO: Add button styles */
   /* HINT: Use display, padding, background-color, color, border, border-radius, cursor, transition */
 }
 
 .btn:hover {
+   background-color: #3651d4;
   /* TODO: Add button hover styles */
   /* HINT: Change background-color */
 }
 
 .btn-success {
+  background-color: var(--success);
   /* TODO: Add success button styles */
   /* HINT: Change background-color */
 }
 
 .btn-warning {
+  background-color: var(--warning);
   /* TODO: Add warning button styles */
   /* HINT: Change background-color */
 }
 
 .btn-info {
+  background-color: var(--info);
   /* TODO: Add info button styles */
   /* HINT: Change background-color */
 }
 
 .btn-outline {
+  background-color: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
   /* TODO: Add outline button styles */
   /* HINT: Transparent background with border and specific text color */
 }
 
 .btn-outline:hover {
+   background-color: var(--primary);
+  color: var(--white);
   /* TODO: Add hover styles for outline button */
   /* HINT: Change background-color and text color */
 }
 
 .btn-group {
+   display: flex;
+  gap: 10px;
   /* TODO: Add button group styles */
   /* HINT: Use display and gap */
 }
 
 /* Chip Styles */
 .chips-container {
+   display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0;
   /* TODO: Add chips container styles */
   /* HINT: Use display, flex-wrap, gap, and margin */
 }
 
 .chip {
+    display: flex;
+  align-items: center;
+  padding: 6px 12px;
+  background-color: var(--light-gray);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: var(--dark);
+  cursor: pointer;
   /* TODO: Add chip styles */
   /* HINT: Use display, align-items, padding, background-color, border-radius, font-size, color, and cursor */
 }
 
 .chip.active {
+  background-color: var(--primary);
+  color: var(--white);
   /* TODO: Add active chip styles */
   /* HINT: Change background-color and color */
 }
