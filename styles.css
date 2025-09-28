@@ -395,6 +395,7 @@ input:checked + .slider-round:before {
 }
 
 .list-item:last-child {
+  border-bottom: none;
   
   /* TODO: Add styles for last list item */
   /* HINT: Remove border-bottom */
@@ -414,43 +415,81 @@ input:checked + .slider-round:before {
 }
 
 .list-item .avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
   /* TODO: Add avatar styles in list items */
   /* HINT: Use width, height, border-radius, margin-right, and object-fit */
 }
 
 /* Form Styles */
 .form-group {
+  margin-bottom: 15px;
   /* TODO: Add form group styles */
   /* HINT: Add margin-bottom */
 }
 
 .form-label {
+   display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
   /* TODO: Add form label styles */
   /* HINT: Use display, margin, and font-weight */
 }
 
 .form-input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid var(--light-gray);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: var(--transition);
+  background-color: var(--white);
+  color: var(--text-color);
   /* TODO: Add form input styles */
   /* HINT: Use width, padding, border, border-radius, font-size, transition */
 }
 
 .form-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 4px rgba(67, 97, 238, 0.4);
   /* TODO: Add focus styles for form inputs */
   /* HINT: Use outline, border-color, and box-shadow */
 }
 
 .form-select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid var(--light-gray);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: var(--transition);
+  background-color: var(--white);
+  color: var(--text-color);
   /* TODO: Add form select styles */
   /* HINT: Similar to form-input, with additional background-color */
 }
 
 .form-textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid var(--light-gray);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: var(--transition);
+  background-color: var(--white);
+  color: var(--text-color);
   /* TODO: Add textarea styles */
   /* HINT: Similar to form-input, with additional min-height and resize properties */
 }
 
 /* Table Styles */
 .table-container {
+   overflow-x: auto;
+  margin: 15px 0;
   /* TODO: Add table container styles */
   /* HINT: Use overflow-x and margin */
 }
@@ -458,7 +497,7 @@ input:checked + .slider-round:before {
 .table {
    width: 100%;
   border-collapse: collapse;
-  margin-top: 10px;
+
   /* TODO: Add table styles */
   /* HINT: Use width, border-collapse, border-spacing */
 }
@@ -473,53 +512,70 @@ input:checked + .slider-round:before {
 }
 
 .table th {
+   background-color: var(--light-gray);
+  font-weight: 600;
+  cursor: pointer;
   /* TODO: Add table header styles */
   /* HINT: Use background-color, font-weight, cursor */
 }
 
 .table th:hover {
+   background-color: var(--primary);
+  color: var(--white);
   /* TODO: Add hover styles for table headers */
   /* HINT: Change background-color */
 }
 
 .table tr {
+  transition: var(--transition);
   /* TODO: Add table row styles */
   /* HINT: Use transition */
 }
 
 .table tr:hover {
+  ackground-color: rgba(67, 97, 238, 0.05);
   /* TODO: Add hover styles for table rows */
   /* HINT: Change background-color with rgba for transparency */
 }
 
 /* Badge Styles */
 .badge {
-  display: inline-block;
+   display: inline-block;
   padding: 3px 8px;
   border-radius: 12px;
   font-size: 0.75rem;
   font-weight: 600;
   background-color: var(--gray);
   color: var(--white);
+  margin-left: 4px;
   /* TODO: Add badge styles */
   /* HINT: Use display, padding, border-radius, font-size, font-weight, and margin-left */
 }
 
 .badge-primary {
+  background-color: var(--primary);
+  color: var(--white);
   /* TODO: Add primary badge styles */
   /* HINT: Use background-color and color */
 }
 
 .badge-success {
+   background-color: var(--success);
+  color: var(--white);
   /* TODO: Add success badge styles */
   /* HINT: Use background-color and color */
 }
 
 .badge-warning {
+  background-color: var(--warning);
+  color: var(--white);
   /* TODO: Add warning badge styles */
   /* HINT: Use background-color and color */
 }
-
+.badge-info {
+  background-color: var(--info);
+  color: var(--white);
+}
 /* Alert Styles */
 .alert {
   padding: 12px 16px;
@@ -533,46 +589,66 @@ input:checked + .slider-round:before {
 }
 
 .alert i {
+   margin-right: 8px;
+  font-size: 1.2rem;
   /* TODO: Add icon styles in alerts */
   /* HINT: Use margin-right and font-size */
 }
 
 .alert-content {
+   display: flex;
+  align-items: center;
   /* TODO: Add alert content styles */
   /* HINT: Use display and align-items */
 }
 
 .alert-close {
+   cursor: pointer;
+  font-weight: bold;
   /* TODO: Add alert close button styles */
   /* HINT: Use cursor and font-weight */
 }
 
 .alert-success {
+   background-color: var(--success-light);
+  color: var(--success);
+  border-left: 4px solid var(--success);
   /* TODO: Add success alert styles */
   /* HINT: Use background-color, color, and border-left */
 }
 
 .alert-warning {
+  background-color: #fff4e5;
+  color: var(--warning);
+  border-left: 4px solid var(--warning);
   /* TODO: Add warning alert styles */
   /* HINT: Use background-color, color, and border-left */
 }
 
 .alert-info {
+  background-color: #e0f7fa;
+  color: var(--info);
+  border-left: 4px solid var(--info);
   /* TODO: Add info alert styles */
   /* HINT: Use background-color, color, and border-left */
 }
 
 /* Navigation Styles */
 .nav {
-  display: flex;
+ display: flex;
   gap: 12px;
   margin: 15px 0;
+  background-color: var(--light-gray);
+  border-radius: 6px;
+  overflow: hidden;
   /* TODO: Add navigation styles */
   /* HINT: Use display, background-color, border-radius, overflow, and margin-bottom */
 }
 
 .nav-item {
   padding: 8px 14px;
+  color: var(--dark);
+  text-decoration: none;
   border-radius: 6px;
   cursor: pointer;
   transition: var(--transition);
@@ -581,33 +657,47 @@ input:checked + .slider-round:before {
 }
 
 .nav-item:hover {
+  background-color: var(--primary);
+  color: var(--white);
   /* TODO: Add hover styles for nav items */
   /* HINT: Change background-color */
 }
 
 .nav-item.active {
-  background-color: var(--light-gray);
+  background-color: var(--primary);
+  color: var(--white);
+  font-weight: 600;
   /* TODO: Add styles for active nav item */
   /* HINT: Use background-color and font-weight */
 }
 
 /* Progress Bar Styles */
 .progress {
+  height: 8px;
+  background-color: var(--light-gray);
+  border-radius: 6px;
+  margin: 10px 0;
+  overflow: hidden;
   /* TODO: Add progress bar container styles */
   /* HINT: Use height, background-color, border-radius, margin, and overflow */
 }
 
 .progress-bar {
+   height: 100%;
+  border-radius: 6px;
+  transition: width 0.3s ease;
   /* TODO: Add progress bar styles */
   /* HINT: Use height, border-radius, and transition */
 }
 
 .progress-primary {
+  background-color: var(--primary);
   /* TODO: Add primary progress bar styles */
   /* HINT: Use background-color */
 }
 
 .progress-success {
+  background-color: var(--success);
   /* TODO: Add success progress bar styles */
   /* HINT: Use background-color */
 }
@@ -628,16 +718,29 @@ input:checked + .slider-round:before {
 }
 
 .page-link {
+  display: block;
+  padding: 6px 12px;
+  border: 1px solid var(--light-gray);
+  border-radius: 4px;
+  color: var(--dark);
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
   /* TODO: Add page link styles */
   /* HINT: Use display, padding, border, border-radius, color, text-decoration, transition, and cursor */
 }
 
 .page-link:hover {
+   background-color: var(--primary);
+  color: var(--white);
   /* TODO: Add hover styles for page links */
   /* HINT: Change background-color */
 }
 
 .page-item.active .page-link {
+   background-color: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
   /* TODO: Add styles for active page link */
   /* HINT: Use background-color, color, and border-color */
 }
