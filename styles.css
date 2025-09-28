@@ -248,99 +248,167 @@ p {
 }
 
 .chip i {
+  margin-right: 6px;
   /* TODO: Add icon styles within chips */
   /* HINT: Use margin-right */
 }
 
 .chip .close {
+  margin-left: 8px;
+  cursor: pointer;
+  font-weight: bold;
   /* TODO: Add close button styles within chips */
   /* HINT: Use margin-left, cursor, and font-weight */
 }
 
 /* Slider Styles */
 .slider-container {
+  margin: 15px 0;
   /* TODO: Add slider container styles */
   /* HINT: Use margin */
 }
 
 .slider {
+    -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  background: var(--light-gray);
+  outline: none;
   /* TODO: Add slider styles */
   /* HINT: Use appearance, width, height, border-radius, background, and outline */
 }
 
 .slider::-webkit-slider-thumb {
+   -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--primary);
+  cursor: pointer;
+  transition: var(--transition);
   /* TODO: Add slider thumb styles */
   /* HINT: Use appearance, width, height, border-radius, background, cursor, and transition */
 }
 
 .slider::-webkit-slider-thumb:hover {
+  background: var(--secondary);
+  transform: scale(1.1);
   /* TODO: Add hover styles for slider thumb */
   /* HINT: Use background and transform */
 }
 
 .slider-value {
+   text-align: right;
+  font-weight: 500;
+  color: var(--dark);
   /* TODO: Add slider value styles */
   /* HINT: Use text-align, font-weight, and color */
 }
 
 /* Switch Styles */
 .switch-container {
+    display: flex;
+  align-items: center;
+  margin: 10px 0;
   /* TODO: Add switch container styles */
   /* HINT: Use display, align-items, and margin */
 }
 
 .switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+  margin-right: 10px;
   /* TODO: Add switch styles */
   /* HINT: Use position, display, width, height, and margin-right */
 }
 
 .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
   /* TODO: Add switch input styles */
   /* HINT: Use opacity, width, and height */
 }
 
 .slider-round {
+    position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--gray);
+  transition: var(--transition);
+  border-radius: 22px;
   /* TODO: Add slider round styles */
   /* HINT: Use position, cursor, top/left/right/bottom properties, background-color, transition, and border-radius */
 }
 
 .slider-round:before {
+   position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 3px;
+  background-color: var(--white);
+  transition: var(--transition);
+  border-radius: 50%;
   /* TODO: Add slider round before element styles */
   /* HINT: Use position, content, height, width, left, bottom, background-color, transition, and border-radius */
 }
 
 input:checked + .slider-round {
+  background-color: var(--primary);
   /* TODO: Add checked slider round styles */
   /* HINT: Change background-color */
 }
 
 input:checked + .slider-round:before {
+    transform: translateX(18px)
   /* TODO: Add checked slider round before element styles */
   /* HINT: Use transform with translateX */
 }
 
 /* List Styles */
 .list {
+   list-style: none;
+  margin: 0;
+  padding: 0;
   /* TODO: Add list styles */
   /* HINT: Use list-style-type, background-color, border-radius, overflow, and box-shadow */
 }
 
 .list-item {
+   padding: 10px 15px;
+  border-bottom: 1px solid var(--light-gray);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: var(--transition);
   /* TODO: Add list item styles */
   /* HINT: Use padding, border-bottom, display, align-items, cursor, and transition */
 }
 
 .list-item:last-child {
+  
   /* TODO: Add styles for last list item */
   /* HINT: Remove border-bottom */
 }
 
 .list-item:hover {
+  background-color: var(--light-gray);
   /* TODO: Add hover styles for list items */
   /* HINT: Change background-color */
 }
 
 .list-item i {
+    background-color: var(--primary);
+  color: var(--white);
   /* TODO: Add icon styles in list items */
   /* HINT: Use margin-right and color */
 }
@@ -388,12 +456,18 @@ input:checked + .slider-round:before {
 }
 
 .table {
+   width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
   /* TODO: Add table styles */
   /* HINT: Use width, border-collapse, border-spacing */
 }
 
 .table th,
 .table td {
+  padding: 10px;
+  border: 1px solid var(--light-gray);
+  text-align: left;
   /* TODO: Add table cell styles */
   /* HINT: Use padding, text-align, border-bottom */
 }
@@ -420,6 +494,13 @@ input:checked + .slider-round:before {
 
 /* Badge Styles */
 .badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: var(--gray);
+  color: var(--white);
   /* TODO: Add badge styles */
   /* HINT: Use display, padding, border-radius, font-size, font-weight, and margin-left */
 }
@@ -441,6 +522,12 @@ input:checked + .slider-round:before {
 
 /* Alert Styles */
 .alert {
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin: 12px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   /* TODO: Add alert styles */
   /* HINT: Use padding, border-radius, margin-bottom, display, align-items, and justify-content */
 }
@@ -477,11 +564,18 @@ input:checked + .slider-round:before {
 
 /* Navigation Styles */
 .nav {
+  display: flex;
+  gap: 12px;
+  margin: 15px 0;
   /* TODO: Add navigation styles */
   /* HINT: Use display, background-color, border-radius, overflow, and margin-bottom */
 }
 
 .nav-item {
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transition);
   /* TODO: Add navigation item styles */
   /* HINT: Use padding, color, text-decoration, transition */
 }
@@ -492,6 +586,7 @@ input:checked + .slider-round:before {
 }
 
 .nav-item.active {
+  background-color: var(--light-gray);
   /* TODO: Add styles for active nav item */
   /* HINT: Use background-color and font-weight */
 }
@@ -519,6 +614,10 @@ input:checked + .slider-round:before {
 
 /* Pagination Styles */
 .pagination {
+  display: flex;
+  list-style: none;
+  gap: 6px;
+  margin-top: 15px;
   /* TODO: Add pagination styles */
   /* HINT: Use display, list-style, padding, and margin */
 }
@@ -545,6 +644,10 @@ input:checked + .slider-round:before {
 
 /* Breadcrumb Styles */
 .breadcrumb {
+  display: flex;
+  list-style: none;
+  gap: 6px;
+  margin: 10px 0;
   /* TODO: Add breadcrumb styles */
   /* HINT: Use display, list-style, padding, and margin */
 }
@@ -602,6 +705,8 @@ input:checked + .slider-round:before {
 
 /* Tooltip Styles */
 .tooltip {
+   position: relative;
+  cursor: help;
   /* TODO: Add tooltip styles */
   /* HINT: Use position, display, border-bottom, and cursor */
 }
@@ -628,11 +733,18 @@ input:checked + .slider-round:before {
 }
 
 .accordion-item {
+   border: 1px solid var(--light-gray);
+  border-radius: 6px;
+  margin: 8px 0;
+  overflow: hidden;
   /* TODO: Add accordion item styles */
   /* HINT: Use border, border-radius, margin-bottom, and overflow */
 }
 
 .accordion-header {
+   padding: 10px 15px;
+  background-color: var(--light-gray);
+  cursor: pointer;
   /* TODO: Add accordion header styles */
   /* HINT: Use padding, background-color, cursor, display, justify-content, align-items, and font-weight */
 }
